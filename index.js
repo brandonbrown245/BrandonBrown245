@@ -41,9 +41,7 @@ bot.on("message", async message => {
   if(message.channel.type === "dm") return;
 
   const serverStats = {
-        guildID: '516973816161894431',
-        ticketCategoryID: 'TID HERE'
-    
+        guildID: '516973816161894431'    
     }
     
     
