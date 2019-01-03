@@ -20,7 +20,7 @@ exports.run = (client, message , args , tools ,) => {
  
  
     let guild = message.guild;
-    const cnl = client.channels.get('518470973092265994');
+    const cnl = client.channels.get('530067267791093761');
     const embed = new Discord.RichEmbed()
     .setAuthor(`${message.author.tag}`)
     .addField('Social Club:', ` ${args}`)
