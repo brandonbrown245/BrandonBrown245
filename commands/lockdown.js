@@ -42,7 +42,7 @@ if (validUnlocks.includes(time)) {
                     console.log(error);
                 });
         });
-}
+
 exports.conf = {
     enabled: true,
     guildOnly: false,
