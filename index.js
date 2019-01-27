@@ -55,30 +55,7 @@ bot.on("message", async message => {
 
   let commandfile = bot.commands.get(cmd.slice(prefix.length));
   if(commandfile) commandfile.run(bot,message,args);
-  
-  client.on("message", message => {
-  if (message.content.startsWith(prefix + "kick")) {
-    const modRole = message.guild.roles.find("name", "Administrators");
-    if (!message.member.roles.has(modRole.id)) {
-      return message.reply("u dont have perms to use");
-    }
-    if (message.mentions.users.size === 0) {
-      return message.reply("Plz mention");
-    }
-    let kickMember = message.guild.member(message.mentions.users.first());
-    if (!kickMember) {
-      return message.reply("not valid user");
-    }
-    if (!message.guild.member(client.user).hasPermission("KICK_MEMBERS")) {
-      return message.reply("dont have perms kick members");
-    }
-    kickMember.kick().then(message.reply(`${message.member.user.username} has been kicked by modeerator ${message.author.name}`));
-  }
-});
-.then(member => {
-message.reply(`${message.user.username} was succesfully kicked.`)
-}).catch(error => {
-console.error(error);
+ 
   
 });
 bot.login(process.env.token);
