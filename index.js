@@ -10,14 +10,14 @@ fs.readdir("./commands/", (err, files) => {
 
   
   client.on('guildMemberAdd', member => {
-    let addRole_newcomer = member.guild.roles.find(role => role.name == "Unregistered");
+    let addRole_Unregistered = member.guild.roles.find(role => role.name == "Unregistered");
     console.log("\x1b[35m\x1b[1m[join]\x1b[0m " + member.user.tag);
     member.send("Hello! We are glad you joined our Cult! \nPlease read the rules in the #rules channel. You'll also find instructions on how to gain access to the server there.\n\nThanks and have fun! :)").then(m => {
         let URLembed = new Discord.RichEmbed()
             .setTitle("(Link to the #rules channel)")
         member.send(URLembed);
     });
-    member.addRole(addRole_newcomer);
+    member.addRole(addRole_Unregistered);
 });
 
 client.on("guildMemberRemove", member => {
