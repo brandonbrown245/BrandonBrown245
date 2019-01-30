@@ -34,7 +34,7 @@ module.exports.run = (client, message, args) => {
   };
 
   exports.help = {
-    name: 'register',
-    description: 'Register Your Sc Name',
-    usage: '>register [SC Name]' 
+    name: 'weather',
+    description: 'Show you the weather',
+    usage: '>register Place' 
   };
