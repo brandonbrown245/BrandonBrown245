@@ -3,7 +3,7 @@ const Discord = require('discord.js');
  
 exports.run = (client, message , args , tools ,) => {
  
-       if (message.channel.name !== 'registration') return message.reply('**You must Register your social club name in the registration chat**');
+       if (message.channel.name !== 'register') return message.reply('**You must Register your social club name in the register chat**');
 
 
   const embed4 = new Discord.RichEmbed()
