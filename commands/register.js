@@ -3,7 +3,7 @@ const Discord = require('discord.js');
  
 exports.run = (client, message , args , tools ,) => {
  
-       if (message.channel.name !== 'register') return message.reply('You must Register your social club name in Register');
+       if (message.channel.name !== 'registration') return message.reply('**You must Register your social club name in the registration chat**');
 
 
   const embed4 = new Discord.RichEmbed()
@@ -32,11 +32,15 @@ exports.run = (client, message , args , tools ,) => {
 
      let role = message.guild.roles.find(role => role.name === 'Registered');
     message.member.addRole(role);
+
+    let removerole = message.guild.roles.find(role => role.name === 'Unregistered');
+    message.member.removeRole(removerole);
+
     if (message.member.roles.has(role.id)) {
         let verifyEmbed = new Discord.RichEmbed()
             .setAuthor(message.member.displayName, message.author.displayAvatarURL)
             .setColor('#36393f')
-            .setDescription('Your account has already been Registered!')
+            .setDescription('**Your account has already been Registered!**')
         return message.channel.send((verifyEmbed));
     } else {
         let verifyEmbed = new Discord.RichEmbed()
@@ -45,6 +49,7 @@ exports.run = (client, message , args , tools ,) => {
             .setDescription('Your account has been successfully Registered.')
         return message.channel.send((verifyEmbed));
     }
+    
  
   };
 
