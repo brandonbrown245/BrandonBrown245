@@ -2,7 +2,7 @@ const Discord = require('discord.js');
  
 exports.run = (client, message , args , tools ,) => {
  
-       if (message.channel.name !== 'register') return message.reply('**You must Unregister your social club name in the register chat**');
+       if (message.channel.name !== 'register') return message.reply('**You must Unregister your social club name in the unregister chat**');
 
 
     message.delete();
