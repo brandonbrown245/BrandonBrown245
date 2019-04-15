@@ -53,10 +53,11 @@ module.exports.run = async (bot, message, args) => {
   if(warns[wUser.id].warns == 3){
     message.guild.member(wUser).ban(reason);
     message.reply(`<@${wUser.id}> has been banned.`)
+    wUser.send(`**You have been banned in ${message.guild.name}\n**Reason**: ${reason}\n**`)
   }
+  wUser.send(`**You have been warned in ${message.guild.name}**,\n**Reason**: ${reason}\n\n**First Warn = Just A Warn\nSecond Warn = 2 Hour Mute\nThird Warn = Banned From The Server** `) 
 
 }
-
 module.exports.help = {
   name: "warn"
 }
