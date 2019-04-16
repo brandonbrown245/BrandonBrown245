@@ -33,10 +33,7 @@ exports.run = (client, message , args , tools ,) => {
     .setColor("#42f45c");
     message.author.send({embed: embed3});
 
-    const embed1 = new Discord.RichEmbed()
-    .setDescription("**Money Drop Timetable\nMonday = Drop Starts At 4:00 Pm\nTuesday = No Money Drop\nWednesday = Drop Starts At 4:00 Pm\nThursday = No Money Drop\nFriday = Drop Starts At 4:00 Pm\nSaturday = No Money Drop\nSunday = Drop Starts At 4:00 Pm**")
-    .setColor("#42f45c");
-    message.author.send({embed: embed1});
+  
 
     if (message.member.roles.has(role.id)) {
         let verifyEmbed = new Discord.RichEmbed()
