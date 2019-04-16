@@ -1,5 +1,5 @@
 
-    const Discord = require('discord.js');
+const Discord = require('discord.js');
  
 exports.run = (client, message , args , tools ,) => {
  
@@ -7,7 +7,7 @@ exports.run = (client, message , args , tools ,) => {
 
 
     let guild = message.guild;
-    const cnl = client.channels.get('561596580260478977');
+    const cnl = client.channels.get('536570203610415124');
     const embed = new Discord.RichEmbed()
     .setAuthor(`${message.author.tag}`)
     .addField('Social Club:', ` ${args}`)
@@ -32,8 +32,6 @@ exports.run = (client, message , args , tools ,) => {
     .setDescription("**The money Dropper Sc name is Batman_345 he will not add you it is up to you to add the money Dropper\n\nHow to join the money drop lobby\n\nWhen you register you will get the sc of the money dropper you have to add him when you did add him. he will add you when he start's a money drop then you just join his lobby just if he says he is doing a money drop**")
     .setColor("#42f45c");
     message.author.send({embed: embed3});
-
-  
 
     if (message.member.roles.has(role.id)) {
         let verifyEmbed = new Discord.RichEmbed()
